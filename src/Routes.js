@@ -4,8 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Whoweare from './pages/Whoweare';
 import Services from './pages/Services';
-import Blog from './pages/Blog';
 import Contacts from './pages/Contacts';
+import NotFound from './pages/NotFound';
 
 export function MainRoutes() {
     return (
@@ -13,8 +13,8 @@ export function MainRoutes() {
             <Route path="/" element={<Home />}/>
             <Route path="/whoweare" element={<Whoweare />}/>
             <Route path="/services" element={<Services />}/>
-            <Route path="/blog" element={<Blog />}/>
             <Route path="/contacts" element={<Contacts />}/>
+            <Route path="*" element={<NotFound />}/>
         </Routes>
     )
 }

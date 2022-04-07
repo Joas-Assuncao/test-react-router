@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import colors from '../../../../styles/colors';
+import colors from '../../styles/colors';
 
 export const Section = styled.section`
     display: flex;
@@ -29,7 +29,7 @@ export const Section = styled.section`
         width: 100%;
 
         padding: 3.75rem .8125rem;
-        gap: 3.75rem;
+        gap: 2.5rem;
 
         background: rgba(30, 37, 56, 0.3);
 
@@ -43,8 +43,8 @@ export const Section = styled.section`
             scrollbar-width: none;
 
             &::-webkit-scrollbar {
-            display: none;
-        }
+                display: none;
+            }
         
             .image-container {
                 display: flex;
@@ -57,13 +57,12 @@ export const Section = styled.section`
 
                 background: rgba(255, 255, 255, 0.5);
 
-
-                &:not(:first-of-type) {
-                    margin-left: 2.5rem;
-                }
+                margin-left: 2.5rem;
 
                 img {
                     max-width: 100%;
+                    max-height: 100%;
+
                     object-fit: cover;
                 }
             }

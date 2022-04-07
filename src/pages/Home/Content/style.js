@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import colors from '../../../../styles/colors';
+import colors from '../../../styles/colors';
 
 export const FirstArticle = styled.article`
     padding: 3.75rem 3.75rem 0 3.75rem;

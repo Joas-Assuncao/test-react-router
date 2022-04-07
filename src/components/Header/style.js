@@ -18,8 +18,8 @@ export const ContainerHeader = styled.header`
     z-index: 1;
 
     img {
-        height: 5rem;
-        width: 6.25rem;
+        height: auto;
+        width: auto
     }
 
     nav {
@@ -28,10 +28,25 @@ export const ContainerHeader = styled.header`
         flex: 1;
 
         a {
-            color: ${colors.whiteItensCards};
             
             font-size: 1.375rem;
             font-weight: 400;
+
+            &[href="/"] {
+                color: ${({currentPath}) => currentPath === "/" ? colors.black60 : colors.whiteItensCards};
+            }
+
+            &[href="/whoweare"] {
+                color: ${({currentPath}) => currentPath === "/whoweare" ? colors.black40 : colors.whiteItensCards};
+            }
+
+            &[href="/contacts"] {
+                color: ${({currentPath}) => currentPath === "/contacts" ? colors.black40 : colors.whiteItensCards};
+            }
+
+            &[href="/services"] {
+                color: ${({currentPath}) => currentPath === "/services" ? colors.black40 : colors.whiteItensCards};
+            }
         }
     }
 

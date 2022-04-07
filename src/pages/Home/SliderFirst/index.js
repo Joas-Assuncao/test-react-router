@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 import SlideData from './SlideData';
 
-import Button from '../../../../components/Button';
+import Button from '../../../components/Button';
 
 import { Section } from './style';
 
-import arrowLeft from '../../../../images/arrow-left.svg';
-import arrowRight from '../../../../images/arrow-right.svg';
+import arrowLeft from '../../../images/arrow-left.svg';
+import arrowRight from '../../../images/arrow-right.svg';
 
 export default function Slider({ heightHeader }) {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -44,7 +44,7 @@ export default function Slider({ heightHeader }) {
                 <section className="section-slider" key={index}>
                     <div className="content-slider">
                         <h1>{slide.title}</h1>
-                        <p>{slide.partner ? <a href="https://stratioautomotive.com/" target="_blank">stratio. </a> : ''}{slide.description}</p>
+                        <p>{slide.description}</p>
                         { slide.link.includes(':')
                             ? <Button><a href={slide.link}>Saiba mais!</a></Button>
                             : <Button><Link to={slide.link}>Saiba mais!</Link></Button>

@@ -13,4 +13,9 @@ export const GlobalStyles = createGlobalStyle`
 
         box-sizing: border-box;
     }
+
+    body::-webkit-scrollbar {
+        min-height: 100vh;
+        display: none;
+    }
 `;

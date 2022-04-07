@@ -1,11 +1,14 @@
 import React from 'react';
-
-import Main from './Main';
+import Content from './Content';
+import SliderFirst from './SliderFirst';
+import SliderClients from '../../components/SliderClients';
 
 export default function Home() {
     return (
         <>
-            <Main />
+            <SliderFirst />
+            <Content />
+            <SliderClients />
         </>
     )
 }

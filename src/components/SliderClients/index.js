@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-import arrowLeft from '../../../../images/arrow-left.svg';
-import arrowRight from '../../../../images/arrow-right.svg';
+import arrowLeft from '../../images/arrow-left.svg';
+import arrowRight from '../../images/arrow-right.svg';
 import { Section } from './style';
 
 import clients from "./SlideData";
@@ -11,17 +11,24 @@ export default function SliderClients() {
     
     function handleScrollLeft(e) {
         e.preventDefault();
-        elementRef.current.scrollLeft -= 240;
+        
+        elementRef.current.scrollLeft === 0
+        ? elementRef.current.scrollLeft += 2400
+        : elementRef.current.scrollLeft -= 1200;
     }
 
     function handleScrollRight(e) {
         e.preventDefault();
-        elementRef.current.scrollLeft += 240;
+        console.log(elementRef.current.scrollLeft);
+
+        elementRef.current.scrollLeft >= 2400
+        ? elementRef.current.scrollLeft -= 2400
+        : elementRef.current.scrollLeft += 1200;
     }
 
     return (
         <Section>
-            <h2>Confira nossos clientes!</h2>
+            <h2>Lorem ipsum dolor sitam!</h2>
             <div className="container-slider">
                 <img
                     src={arrowLeft}
