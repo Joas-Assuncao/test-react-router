@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 const app = express();
 
-app.use(express.static(resolve(__dirname, 'build')));
+app.use('/', express.static(resolve(__dirname, 'build')));
 
 app.listen(process.env.PORT || 3000, err => (
     err ? console.error(err) : console.log('Server is running!')
