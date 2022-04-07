@@ -1,6 +1,10 @@
 import express from 'express';
-import path from 'path';
+import { resolve } from 'path';
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '')))
+app.use(express.static(resolve(__dirname, 'build')));
+
+app.listen(process.env.PORT || 3000, err => (
+    err ? console.error(err) : console.log('Server is running!')
+))
